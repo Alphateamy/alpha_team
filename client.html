@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpha Team - Services</title>
+    <link rel="stylesheet" href="ss.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h2>Alpha Team</h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index2.html">About</a></li>
+                <li><a href="service.html">Service</a></li>
+                <li><a href="product.html">Product</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <style>
+            .i1
+            {
+                object-fit: cover;
+            }
+            
+        </style>
+    </header>
+
+    <main>
+        <section class="team">
+            <h2>Our Client</h2>
+            <div id="service-container" class="team-container">
+                <div class="team-member">
+                    <a href="attendance.jpg">
+                        <img class="i1" src="attendance.jpg" width="250px" height="200px">
+                    </a>
+                    <h3>Attendance System</h3>
+                    <p>An attendance system is a comprehensive tool designed to manage and monitor the attendance of individuals within an organization, such as employees in a workplace, students in an educational institution, or participants in an event.
+                         These systems ensure accurate record-keeping, minimize errors, and streamline administrative processes.</p>
+                </div>
+                <br>
+                <div class="team-member">
+                    <a href="photo_2024-12-10_19-01-50.jpg">
+
+                        <img class="i1" src="photo_2024-12-10_19-01-50.jpg" width="250px" height="200px">
+                    </a>
+                    <h3>EarthQuake Project</h3>
+                    <p>An Earthquake Detection and Alert System is a crucial technological solution designed to detect seismic activities and issue timely alerts to minimize the impact on human lives and infrastructure.
+                         These systems utilize advanced sensors and algorithms to monitor and analyze ground movements in real-time, providing essential early warnings.</p>
+                </div>
+                <div class="team-member">
+                    <a href="firefighter.png">
+
+                        <img class="i1" src="firefighter.png" width="250px" height="200px">
+                    </a>
+                    <h3>FireFighter Robot</h3>
+                    <p>A Firefighter Robot is an innovative solution designed to assist or replace human firefighters in hazardous and life-threatening environments.
+                         These robots are equipped with advanced technology to detect, suppress, and prevent fires, ensuring safety while minimizing risks to human lives.</p>
+                </div>
+                <!-- Additional services -->
+            
+                <div class="team-member hidden">
+                    <a href="POS_System_Cash_Register_Win10_Electronic_Touch_Screen_with_Terminal.jpeg">
+                        <img class="i1" src="POS_System_Cash_Register_Win10_Electronic_Touch_Screen_with_Terminal.jpeg" width="250px" height="200px">
+
+                    </a>
+                    <h3>Cashier System</h3>
+                    <p>Cashier System is a comprehensive tool designed to manage sales, inventory, and customer transactions efficiently in a retail or service environment. It integrates hardware and software solutions to provide a seamless checkout experience and backend management.
+
+                    </p>
+                </div>
+                
+                
+            </div>
+            <button id="toggle-button" class="btn">Show All Services</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright &copy; 2024 AlphaTeam. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript to toggle services visibility
+        const toggleButton = document.getElementById("toggle-button");
+        const hiddenServices = document.querySelectorAll(".hidden");
+
+        toggleButton.addEventListener("click", () => {
+            hiddenServices.forEach(service => {
+                service.classList.toggle("hidden");
+            });
+            // Update button text
+            toggleButton.textContent =
+                toggleButton.textContent === "Show All Services"
+                    ? "Show Less"
+                    : "Show All Services";
+        });
+    </script>
+</body>
+</html>

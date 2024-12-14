@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpha Team - Team</title>
+    <link rel="stylesheet" href="ss.css">
+    <style>
+      
+
+        .teamm {
+            text-align: center;
+            padding: 40px 20px;
+            position: relative;
+            background-color: #fff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin: 20px;
+        }
+
+        .teamm h2 {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .team-containerr {
+            display: flex;
+            overflow: hidden;
+            scroll-behavior: smooth;
+            max-width: 1000px;
+            margin: 0 auto;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: #fefefe;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .team-memberr {
+            flex: 0 0 33.33%;
+            box-sizing: border-box;
+            padding: 15px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fade-in-slide 0.9s ease-out forwards;
+
+        }
+
+        .team-memberr:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .team-memberr img {
+            display: block;
+            margin: 0 auto 10px;
+            border-radius: 10px;
+            height: 150px;
+            width: auto;
+        }
+
+        .team-memberr h3 {
+            margin: 10px 0;
+            font-size: 18px;
+            color: #007BFF;
+        }
+
+        .team-memberr p {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .scroll-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 20px 20px;
+            border-radius: 100px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .scroll-left
+        {
+            margin-left: 100px;
+        }
+        .scroll-right 
+        {
+            margin-right: 100px;
+        }
+        .scroll-button:active {
+            transform: translateY(-50%) scale(0.95);
+        }
+
+        .scroll-button:hover {
+            background-color: #0056b3;
+        }
+
+        .scroll-left {
+            left: -60px;
+        }
+
+        .scroll-right {
+            right: -60px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            margin-top: 40px;
+        }
+        @keyframes background-slide {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+  @keyframes slide-in-right {
+    0% {
+      opacity: 0;
+      transform: translateX(100%); /* Start off-screen to the right */
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0); /* End at the final position */
+    }
+  }
+  @keyframes slide-in-left {
+    0% {
+      opacity: 0;
+      transform: translateX(-100%); /* Start off-screen to the left */
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0); /* End at the final position */
+    }
+}
+
+  
+  /* Heading Animation */
+  @keyframes fade-in-slide {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Animation for Images */
+  @keyframes zoom-in {
+    0% {
+      transform: scale(0.8);
+      opacity: 0.5;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h2>Alpha Team</h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index2.html">About</a></li>
+                <li><a href="service.html">Service</a></li>
+                <li><a href="product.html">Product</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="teamm">
+            <h2>Product</h2>
+            <button class="scroll-button scroll-left">&lt;</button>
+            <div class="team-containerr" id="teamContainer">
+                <div class="team-memberr">
+                    <a href="hp 1.jpg">
+                        <img src="hp 1.jpg" alt="Laptop">
+
+                    </a>
+                    <h3>HP Victus 15</h3>
+                    <h2>1100,000 IQD</h2>
+                    
+                </div>
+                <div class="team-memberr">
+                    <a href="msi 1.jpg">
+                        <img src="msi 1.jpg" alt="Laptop">
+
+                    </a>
+                    <h3>MSI cyborg 15 A13UDX</h3>
+                    <h2>1000,000 IQD</h2>
+                   
+                </div>
+                <div class="team-memberr">
+                    <a href="asus 1.jpg">
+
+                        <img src="asus 1.jpg"alt="Laptop">
+
+                    </a>
+                    <h3>Asus TUF fx507</h3>
+                    <h2>1800,000 IQD</h2>
+                    
+                </div>
+                <div class="team-memberr">
+                    <a href="acer 1.jpg">
+                        
+                        <img src="acer 1.jpg" alt="Laptop">
+                    </a>
+                    <h3>ACER
+                        Nitro V</h3>
+                        <h2>900,000 IQD</h2>
+                    
+                </div>
+                <div class="team-memberr">
+                    <a href="msi 2.jpg">
+
+                        <img src="msi 2.jpg" alt="Laptop">
+                    </a>
+                    <h3>MSI Katana 
+                        15 B13VGK</h3>
+                        <h2>1900,000 IQD</h2>
+                 
+                </div>
+                <div class="team-memberr">
+                    <a href="acer 2.jpg">
+
+                        <img src="acer 2.jpg" alt="Laptop">
+                    </a>
+                    <h3>ACER
+                        R PREDITOR NEO 16</h3>
+                        <h2>2000,000 IQD</h2>
+                    
+                </div>
+                <div class="team-memberr">
+                    <a href="AAAA1.jpg">
+
+                        <img src="AAAA1.jpg"alt="Laptop">
+                    </a>
+                    <h3>AECR shadow</h3>
+                    <h2>1500,000 IQD</h2>
+                    
+                </div>
+                <div class="team-memberr">
+                    <a href="MSI 1111.jpg">
+
+                        <img src="MSI 1111.jpg" alt="Laptop">
+                    </a>
+                    <h3>MSI THIN 15 B12UC</h3>
+                    <h2>950,000 IDQ</h2>
+                </div>
+            </div>
+            <button class="scroll-button scroll-right">&gt;</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright &copy; 2024 AlphaTeam. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const teamContainer = document.getElementById('teamContainer');
+        const scrollLeftButton = document.querySelector('.scroll-left');
+        const scrollRightButton = document.querySelector('.scroll-right');
+
+        scrollLeftButton.addEventListener('click', () => {
+            teamContainer.scrollBy({
+                left: -teamContainer.offsetWidth,
+                behavior: 'smooth'
+            });
+        });
+
+        scrollRightButton.addEventListener('click', () => {
+            teamContainer.scrollBy({
+                left: teamContainer.offsetWidth,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,240 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    line-height: 1.6;
+}
+
+/* Navigation Bar */
+header nav {
+    background: #000;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    flex-wrap: wrap; /* Allow items to wrap on mobile */
+}
+
+header nav h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap; /* Allow items to wrap on mobile */
+    padding: 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: background 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background: #f39c12;
+    color: #000;
+    border-radius: 5px;
+}
+
+
+/* Team Section */
+.team {
+    text-align: center;
+    padding: 2rem;
+    background: #fff;
+}
+
+.team h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.team-container {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap; /* Allow flex items to wrap responsively */
+}
+ .team-member {
+    background: #f9f9f9;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    transition: transform 0.2s ease;
+    animation: fade-in-slide 1.5s ease-out forwards;
+    
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+}
+
+.team-member h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.team-member p {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Hidden Services Section */
+.hidden {
+    display: none;
+}
+
+/* Button Style */
+.btn {
+    background: #b00101;
+    color: #fff;
+    padding: 0.7rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-top: 1rem;
+    display: inline-block;
+    transition: background 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #e67e22;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background: #000;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+/* Media Queries - Mobile Responsiveness */
+@media (max-width: 768px) {
+    header nav {
+        flex-direction: column; /* Stack nav items vertically */
+        text-align: center;
+    }
+
+    nav ul {
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    nav ul li a {
+        padding: 0.5rem;
+    }
+
+    .team-container {
+        gap: 1rem;
+    }
+
+    .team-member {
+        width: 100%; /* Make team members take the full width on mobile */
+        max-width: 350px;
+    }
+
+    header nav h2 {
+        font-size: 1.2rem;
+    }
+
+    .team h2 {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header nav {
+        padding: 0.5rem;
+    }
+
+    nav ul {
+        gap: 0.3rem;
+    }
+
+    nav ul li a {
+        font-size: 0.9rem;
+    }
+
+    .team h2 {
+        font-size: 1.3rem;
+    }
+
+    .team-member {
+        font-size: 0.8rem;
+    }
+
+    .btn {
+        font-size: 0.8rem;
+        padding: 0.5rem 1rem;
+    }
+}
+@keyframes background-slide {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+  @keyframes slide-in-right {
+    0% {
+      opacity: 0;
+      transform: translateX(100%); /* Start off-screen to the right */
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0); /* End at the final position */
+    }
+  }
+  @keyframes slide-in-left {
+    0% {
+      opacity: 0;
+      transform: translateX(-100%); /* Start off-screen to the left */
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0); /* End at the final position */
+    }
+}
+
+  
+  /* Heading Animation */
+  @keyframes fade-in-slide {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Animation for Images */
+  @keyframes zoom-in {
+    0% {
+      transform: scale(0.8);
+      opacity: 0.5;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }

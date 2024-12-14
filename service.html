@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpha Team - Services</title>
+    <link rel="stylesheet" href="ss.css">
+    <style>
+         
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    line-height: 1.6;
+}
+
+/* Header & Navigation Bar */
+
+/* Main Content Area */
+main.contact-us {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 10px;
+}
+
+/* Contact Info Section */
+.contact-info {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    color: #555;
+}
+
+.contact-info h2 {
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+.contact-details {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.contact-details div {
+    flex: 1 1 150px;
+}
+
+.social_media a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #555;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social_media a:hover {
+    color: #1e90ff;
+}
+
+.social_media img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Contact Form Section */
+.contact-form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.contact-form h2 {
+    margin-bottom: 15px;
+    font-size: 1.6rem;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.form-group {
+    flex: 1 1 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.submit-btn {
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #1e90ff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #555;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    header nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul {
+        justify-content: center;
+    }
+
+    .contact-details div {
+        flex: 1 1 100%;
+    }
+
+    form .form-group {
+        flex: 1 1 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    header nav h2 {
+        font-size: 1.5rem;
+    }
+
+    nav ul li a {
+        font-size: 0.9rem;
+    }
+
+    .contact-info h2,
+    .contact-form h2 {
+        font-size: 1.4rem;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h2>Alpha Team</h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index2.html">About</a></li>
+                <li><a href="service.html">Service</a></li>
+                <li><a href="product.html">Product</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="team">
+            <h2>Services</h2>
+            <div id="service-container" class="team-container">
+                <div class="team-member">
+                    <h3>Academic Service</h3>
+                    <p>Helping students achieve academic success.</p>
+                </div>
+                <div class="team-member">
+                    <h3>Business Service</h3>
+                    <p>Offering professional business solutions and support.</p>
+                </div>
+                <div class="team-member">
+                    <h3>Software Development</h3>
+                    <p>Specialized in web and mobile app development.</p>
+                </div>
+                <!-- Additional services -->
+                <div class="team-member hidden">
+                    <h3>Embedded Systems</h3>
+                    <p>Designing and implementing embedded system solutions.</p>
+                </div>
+                <div class="team-member hidden">
+                    <h3>Collaboration Tools</h3>
+                    <p>Real-Time communication platform <br> ( Microsoft Team)</p>
+                    <p>Document Sharing and editing Tools  <br>  ( Microsoft Office )</p>
+                </div>
+                
+            </div>
+            <button id="toggle-button" class="btn">Show All Services</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright &copy; 2024 AlphaTeam. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript to toggle services visibility
+        const toggleButton = document.getElementById("toggle-button");
+        const hiddenServices = document.querySelectorAll(".hidden");
+
+        toggleButton.addEventListener("click", () => {
+            hiddenServices.forEach(service => {
+                service.classList.toggle("hidden");
+            });
+            // Update button text
+            toggleButton.textContent =
+                toggleButton.textContent === "Show All Services"
+                    ? "Show Less"
+                    : "Show All Services";
+        });
+    </script>
+</body>
+</html>
